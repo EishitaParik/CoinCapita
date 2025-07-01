@@ -20,6 +20,7 @@ const aj = arcjet({
       allow: [
         "CATEGORY:SEARCH_ENGINE", // Google, Bing, etc
         "GO_HTTP", // For Inngest
+        "VERCEL_SCREENSHOT",
         // See the full list at https://arcjet.com/bot-list
       ],
     }),
