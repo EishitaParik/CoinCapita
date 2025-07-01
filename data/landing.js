@@ -91,42 +91,42 @@ export const testimonialsData = [
   {
     name: "Sandeep Parik",
     role: "Entrepreneur",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    image: "/F3.jpeg",
     quote:
       "CoinCapita has transformed how I manage my business finances. The AI insights have helped me identify cost-saving opportunities I never knew existed.",
   },
   {
     name: "Sweta",
     role: "Corporate Professional",
-    image: "https://randomuser.me/api/portraits/women/61.jpg", // changed
+    image: "/F1.jpeg", // changed
     quote:
       "The receipt scanning feature in CoinCapita saves me hours each month. Now I can focus on my work instead of manual data entry and expense tracking.",
   },
   {
     name: "Dr. Aishwarya",
     role: "Dentist",
-    image: "https://randomuser.me/api/portraits/women/12.jpg",
+    image: "/F6.jpeg",
     quote:
       "I recommend CoinCapita to all my clients. The multi-currency support and detailed analytics make it perfect for managing finances efficiently.",
   },
   {
     name: "Kushant Singh",
     role: "Software Engineer",
-    image: "https://randomuser.me/api/portraits/men/44.jpg",
+    image: "/F4.jpeg",
     quote:
       "Using CoinCapita has streamlined my budgeting and expense tracking. The automated insights help me make smarter financial decisions.",
   },
   {
     name: "Sangita ",
     role: "Family Manager",
-    image: "https://randomuser.me/api/portraits/women/45.jpg", // changed
+    image: "/F2.jpeg", // changed
     quote:
       "CoinCapita has helped me keep track of household expenses easily. The simple interface makes budgeting less stressful.",
   },
   {
     name: "Anshumaan",
     role: "Budgeting Newbie",
-    image: "https://randomuser.me/api/portraits/men/65.jpg",
+    image: "/F5.jpeg",
     quote:
       "Thanks to CoinCapita, I’ve started learning how to manage my allowance and save better for my goals.",
   },
