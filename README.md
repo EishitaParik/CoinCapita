@@ -1,7 +1,5 @@
 # 💰 CoinCapita
 
-![CoinCapita Banner](https://user-images.githubusercontent.com/yourusername/banner-placeholder.png)
-
 **CoinCapita** is an **AI-powered finance application** that leverages cutting-edge technologies to help users **track expenses**, **scan receipts with AI**, and **gain insights** into their spending habits — all through a sleek and intuitive interface.
 
 🚀 Built with **Next.js**, integrated with **Gemini AI**, secured via **Clerk**, and visualized using **Recharts**, CoinCapita transforms personal finance management into a smart and effortless experience.
@@ -22,7 +20,6 @@
 - 🧾 Track, Add, Edit & Delete Transactions
 - 📅 Monthly Budget Management
 - 📧 Email Alerts using **Resend API**
-- 🌗 Light & Dark Mode
 - 🎨 Modern UI with **TailwindCSS** & **Shadcn UI**
 - 🔐 Secured using **Arcjet**
 
@@ -40,13 +37,6 @@
 
 ---
 
-## 📸 Screenshots
-
-| Dashboard | Add Transaction | AI Receipt Scan |
-|---|---|---|
-| ![](https://user-images.githubusercontent.com/yourusername/dashboard.png) | ![](https://user-images.githubusercontent.com/yourusername/add-transaction.png) | ![](https://user-images.githubusercontent.com/yourusername/ai-receipt.png) |
-
----
 🛡 Security
 All requests are protected using Clerk.
 
