@@ -9,14 +9,14 @@ import {
 
 // Stats Data (realistic for early stage)
 export const statsData = [
-  /*{
-    value: "500+",
+  {
+    value: "10+",
     label: "Active Users",
   },
   {
     value: "₹50K+",
     label: "Transactions Tracked",
-  }, */
+  }, 
   {
     value: "99.5%",
     label: "Uptime",
