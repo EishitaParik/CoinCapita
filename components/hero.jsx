@@ -42,7 +42,7 @@ const HeroSection = () => {
               Get Started
             </Button>
           </Link>
-          <Link href="https://github.com/EishitaParik/CoinCapita">
+          <Link href="https://youtu.be/GOtcMtMik3I">
             <Button size="lg" variant="outline" className="px-8">
               Watch Demo
             </Button>
