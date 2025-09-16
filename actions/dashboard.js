@@ -1,6 +1,8 @@
- "use server";
+"use server";
 
+import aj from "@/lib/arcjet";
 import { db } from "@/lib/prisma";
+import { request } from "@arcjet/next";
 import { auth } from "@clerk/nextjs/server";
 import { revalidatePath } from "next/cache";
 
@@ -9,17 +11,18 @@ const serializeTransaction = (obj) => {
   if (obj.balance) {
     serialized.balance = obj.balance.toNumber();
   }
-
-   if (obj.amount) {
+  if (obj.amount) {
     serialized.amount = obj.amount.toNumber();
   }
-
   return serialized;
 };
 
 export async function getUserAccounts() {
   const { userId } = await auth();
   if (!userId) throw new Error("Unauthorized");
+
+console.log("NODE_ENV:", process.env.NODE_ENV);
+console.log("DATABASE_URL:", process.env.DATABASE_URL);
 
   const user = await db.user.findUnique({
     where: { clerkUserId: userId },
@@ -28,7 +31,8 @@ export async function getUserAccounts() {
   if (!user) {
     throw new Error("User not found");
   }
- // try {
+
+  try {
     const accounts = await db.account.findMany({
       where: { userId: user.id },
       orderBy: { createdAt: "desc" },
@@ -42,21 +46,19 @@ export async function getUserAccounts() {
     });
 
     // Serialize accounts before sending to client
-   const serializedAccounts = accounts.map(serializeTransaction);
+    const serializedAccounts = accounts.map(serializeTransaction);
 
     return serializedAccounts;
- // } catch (error) {
-  //  console.error(error.message);
-  //}
-
-}   
+  } catch (error) {
+    console.error(error.message);
+  }
+}
 
 export async function createAccount(data) {
   try {
     const { userId } = await auth();
     if (!userId) throw new Error("Unauthorized");
-       
-    /*
+
     // Get request data for ArcJet
     const req = await request();
 
@@ -81,7 +83,7 @@ export async function createAccount(data) {
       }
 
       throw new Error("Request blocked");
-    }    */
+    }
 
     const user = await db.user.findUnique({
       where: { clerkUserId: userId },
@@ -135,7 +137,7 @@ export async function createAccount(data) {
   }
 }
 
- export async function getDashboardData() {
+export async function getDashboardData() {
   const { userId } = await auth();
   if (!userId) throw new Error("Unauthorized");
 
@@ -148,10 +150,10 @@ export async function createAccount(data) {
   }
 
   // Get all user transactions
-    const transactions = await db.transaction.findMany({
+  const transactions = await db.transaction.findMany({
     where: { userId: user.id },
     orderBy: { date: "desc" },
   });
 
   return transactions.map(serializeTransaction);
-}   
+}
